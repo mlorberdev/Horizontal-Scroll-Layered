@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Cinzel&display=swap');
+
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Cinzel';
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  cursor: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  cursor: url("data:image/svg+xml,%3Csvg width='8mm' height='8mm' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='3.5' style='fill:%232fff;opacity:.7;'/%3E%3C/svg%3E") 4 4, default;
+}
+
+:root {
+  --br: #703f37;
+  --gr: #b6c199;
+  --pk: #c8b7a6;
+  --bl: #7d94b5;
+  --rd: #c29591;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-size: 16px;
+}
+
+#wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*  note vh and vw switched  */
+  width: 100vh;
+  height: 100vw;
+  /*    */
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100vh);
+  overflow-x: hidden;
+  overflow-y: scroll;
+    /* scroll-snap-type: y mandatory; */
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100vh);
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  /*   scroll-snap-align: start; */
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*  backface visibility keeps font from looking weird  */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 1em;
+  /* transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
+  transform-style: preserve-3d; */
+}
+
+section {
+  color:white;
+  mix-blend-mode: difference;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500vw;
+  height: 100vh;
+  transition: left .2s linear;
+}
+
+#c,
+#c2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500vw;
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* filter:invert(1); */
+  z-index: 100;
+}
+
+footer>a {
+  text-decoration: none;
+}
+
+footer>a>svg {
+  width: 2vh;
+  fill: #111;
+  margin: 0 5px;
+}
+
+.screen {
+  width: 40vw;
+  height: 22.5vw;
+  border: 5px solid #000;
+  border-radius: 10px;
+}
+
+.mobile {
+  width: 5vw;
+  height: 10vw;
+  border: 5px solid #000;
+  border-radius: 5px;
+}
