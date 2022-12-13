@@ -63,14 +63,10 @@ section {
   /*  backface visibility keeps font from looking weird  */
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  font-size: 1em;
+  font-size: 6em;
+  color:#000;
   /* transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
   transform-style: preserve-3d; */
-}
-
-section {
-  color:white;
-  mix-blend-mode: difference;
 }
 
 .bg {
